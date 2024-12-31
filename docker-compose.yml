@@ -1,0 +1,11 @@
+services:
+  cs1.6-server:
+    image: archont94/counter-strike1.6:latest
+    ports:
+      - "27015:27015/udp"
+      - "27015:27015/tcp"
+      - "80:80"
+    volumes:
+      - ./cs16-data:/cs16
+      - ./cs16-data/server.cfg:/hlds/cstrike/server.cfg
+      - ./cs16-data/users.ini:/hlds/cstrike/addons/amxmodx/configs/users.ini
